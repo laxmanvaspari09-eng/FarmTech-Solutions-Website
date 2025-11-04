@@ -1,0 +1,121 @@
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 350px; /* Increased width */
+    position: relative;
+}
+
+.skip-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #007BFF; /* Blue color for login link */
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.skip-button:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    text-align: center;
+    color: #2980b9;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif; /* Changed font style */
+    font-size: 24px; /* Increased font size */
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-container button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    width: 100%; /* Set width to 100% */
+    padding: 12px; /* Increased padding for a bigger button */
+    background: linear-gradient(45deg,#2980b9,#2980b9); /* Gradient background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+   
+}
+
+button[type="submit"]:hover {
+    background-color: #1a5a85;
+
+}
+.owner-login {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.owner-login a {
+    color:#2980b9; /* Blue color for owner register link */
+    text-decoration: none;
+}
+
+.owner-login a:hover {
+    text-decoration: underline;
+}
+.submit-btn{
+    
+    text-align: center;
+   padding-top:10px;
+   padding-bottom:10px;
+    padding-left: 129px;
+    padding-right: 132px;
+    border-radius: 5px;
+    background-color:#2980b9;
+    color:white
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register to FarmTech Solutions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+            color:#2980b9;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #1f608b;
+        }
+        .login-link {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+        .owner-link {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Register to FarmTech Solutions</h2>
+    <form action="ow_login.php" method="POST"> <!-- Update action URL as needed -->
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="number" placeholder="Phone Number" required>
+        <input type="text" name="location" placeholder="Location" required>
+        <select name="machineType" required>
+            <option value="" disabled selected>Select Machine Type</option>
+        <option value="tractor-trolley">Tractor Trolley</option>
+        <option value="cultivator">Cultivator</option>
+        <option value="dozer">Dozer</option>
+        <option value="harvester">Harvester</option>
+        <option value="balers">Balers</option>
+        <option value="sprayers">Sprayers</option>
+        <option value="plow">Plow</option>
+        <option value="other">Other</option>
+        </select>
+        <input type="text" name="otherMachine" placeholder="Specify if Others" style="display:none;" id="otherMachine">
+        
+        <button type="submit">Submit</button>
+        
+    </form>
+</div>
+
+<script>
+    // Show 'Others' input if 'Others' is selected
+    document.querySelector('select[name="machineType"]').addEventListener('change', function() {
+        const otherMachineInput = document.getElementById('otherMachine');
+        if (this.value === 'Others') {
+            otherMachineInput.style.display = 'block';
+            otherMachineInput.setAttribute('required', 'required');
+        } else {
+            otherMachineInput.style.display = 'none';
+            otherMachineInput.removeAttribute('required');
+        }
+    });
+</script>
+
+</body>
+</html>

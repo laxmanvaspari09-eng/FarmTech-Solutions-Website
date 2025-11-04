@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmTech Solutions</title>
+    <link rel="stylesheet" href="owner_login/ow_Interface/interface.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="owner_login\ow_Interface\logo.png" alt="FarmTech Solutions Logo">
+        </div>
+        <div class="title">
+            <h1>FARMTECH SOLUTIONS</h1>
+
+        </div>
+        <div class="user-icon-container">
+            <div class="user-icon" onclick="toggleSidebar()">
+                <i class="fa-regular fa-user fa-2xl" style="color: #ffffff;"></i>
+            </div>
+            <span class="profile-text">Profile</span> <!-- Profile text -->
+        </div>
+        
+        <!-- Sidebar for user actions -->
+        <div id="sidebar" class="sidebar">
+            <button class="close-sidebar" onclick="toggleSidebar()">&times;</button>
+            <h2>User Profile</h2>
+        
+            <!-- Profile Picture -->
+            <div class="profile-picture">
+                <i class="fa-regular fa-user fa-2xl" style="color: #ffffff;"></i>
+                <h2 class="upload-btn">User</h2>
+            </div>
+            <div class="privacy">
+           
+                privacy
+                policy
+                •Terms and conditions
+            
+            </div>
+            <!-- Log Out Button -->
+            <button class="logout-button" onclick="logOut()">Log Out</button>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="ow_home.html">Home</a></li>
+            <li><a href="owner_login/ow_Interface/All.html">Machinery</a></li>
+            <li><a href="#help-section">Support</a></li>
+            <li><a href="owner_login/ow_Interface/feedback.html">Feedback</a></li>
+            <li><a href="owner_login\ow_Interface\my product\product.html">My Machinery</a></li>
+        </ul>
+  
+
+        <section class="search-section">
+            <div class="search-container">
+                <div class="search-wrapper">
+                    <input type="text" id="search-input" placeholder="Search here..."
+                        oninput="showSuggestions(this.value)">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                </div>
+                <ul id="suggestions-list"></ul>
+            </div>
+        </section>
+    </nav>
+    <section class="main-content">
+        <div class="item-container">
+            <div class="item">
+                <a href="owner_login/ow_Interface/mac1_tractor/tractor.html">
+                    <img src="owner_login/ow_Interface/tractor with tralley.jpeg" alt="Item 1">
+                    <b>Tractor Trolley</b>
+                </a>
+            </div>
+            <div class="item">
+                <a href="owner_login/ow_Interface/mac2_cultivator\cultivator.html">
+                    <img src="owner_login/ow_Interface/Cultivator.jpeg" alt="Item 2">
+                    <b>Cultivator</b>
+                </a>
+            </div>
+            <div class="item">
+                <a href="owner_login/ow_Interface/mac3_dozer\dozer.html">
+                    <img src="owner_login/ow_Interface/dozer.jpg" alt="Item 3">
+                    <b>Dozer</b>
+                </a>
+            </div>
+            <div class="item">
+                <a href="owner_login/ow_Interface/mac4_harvester\harvester.html">
+                    <img src="owner_login/ow_Interface/harvester.jpg" alt="Item 4">
+                    <b>Harvester</b>
+                </a>
+            </div>
+        </div>
+        <div class="latest-news">
+            <h2 class="News">Latest News for Farmers</h2>
+            <p>Farmers and Loans: Denied fresh loans, debt traps await Telangana farmers
+                Agriculture experts feel that if the banks turn their back on farmers, they would be forced to approach
+                private lenders which will in turn land them in a debt trap.
+                By Telangana Today
+                Published Date - 26 August 2024, 07:25 PM
+                Farmers and Loans: Denied fresh loans, debt traps await Telangana farmers
+                Hyderabad: With several banks not offering fresh loans to a large number of farmers citing various
+                reasons, the farmers are under severe stress as they have to look towards private lenders to take up
+                agricultural activities.
+                Agriculture experts feel that if the banks turn their back on farmers, they would be forced to approach
+                private lenders which will in turn land them in a debt trap. Small farmers who approach unregistered
+                private money lenders after they are denied loans by the banks fall into an unending debt trap. The
+                lenders constantly harass them, issuing threats or seizing their lands, which sometimes pushes them to
+                attempt suicide.</p>
+        </div>
+    </section>
+
+    <div class="chat-bot">
+        <button onclick="toggleChat()">Chat Bot</button>
+    </div>
+
+    <div id="chat-area" class="chat-area">
+        <div class="chat-header">
+            <span>Ask question here</span>
+            <button id="close-chat" class="close-chat-button">&times;</button>
+        </div>
+        <div id="chat-log" class="chat-log"></div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Text here">
+            <button onclick="sendMessage()"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+    <!-- Help Section Below the Page -->
+    <section id="help-section" class="help-section">
+        <center>
+            <h2>Need Help? Contact Us!</h2>
+        </center>
+        <form id="help-form" action="help.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea><br>
+
+            <button type="submit">Send</button>
+            <div id="sent-message" class="sent-message">Sent!</div> <!-- Moved inside the form -->
+        </form>
+    </section>
+
+    <script src="owner_login/ow_Interface/interface.js"></script>
+</body>
+
+</html>
